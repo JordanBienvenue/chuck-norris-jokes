@@ -3,8 +3,8 @@ import styles from "./Thumbnail.module.css"
 import Link from 'next/link'
 const Thumbnail = ({ category }) => {
     return (
-        <Link href={`/jokes/${category}`}>
-            <div className={styles.container}>{category}</div>
+        <Link className={styles.container} href={`/jokes/${category}`}>
+            <p>{category}</p>
         </Link>
     )
 }
