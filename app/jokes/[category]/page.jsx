@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import Card from '@/components/Card/Card'
 import style from "./page.module.css"
 
+
 async function getJoke(category) {
     const res = await fetch(`https://api.chucknorris.io/jokes/random?category=${category}`)
     if (!res.ok) return undefined
@@ -10,7 +11,7 @@ async function getJoke(category) {
 }
 
 
-const page = async ({ params: { category } }) => {
+const CategoryPage = async ({ params: { category } }) => {
     const data = await getJoke(category)
 
     const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
@@ -26,7 +27,7 @@ const page = async ({ params: { category } }) => {
     )
 }
 
-export default page
+export default CategoryPage
 
 //  https://api.chucknorris.io/jokes/random?category={category}
 // https://api.chucknorris.io/jokes/random?category=animal

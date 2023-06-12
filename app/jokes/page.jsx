@@ -4,7 +4,7 @@ import Card from '@/components/Card/Card'
 import { useState, useEffect } from 'react'
 import styles from "./page.module.css"
 
-const page = () => {
+const RandomPage = () => {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
 
@@ -44,4 +44,4 @@ const page = () => {
         </main >
     )
 }
-export default page
+export default RandomPage
