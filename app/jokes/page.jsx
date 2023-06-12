@@ -1,7 +1,8 @@
 "use client"
-import { ButtonAction } from '@/components/Buttons/Buttons'
+import { ButtonAction, ButtonLinks } from '@/components/Buttons/Buttons'
 import Card from '@/components/Card/Card'
 import { useState, useEffect } from 'react'
+import styles from "./page.module.css"
 
 const page = () => {
     const [data, setData] = useState(null)
@@ -30,9 +31,15 @@ const page = () => {
             <h1>Random Joke</h1>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "end" }} >
                 <Card data={data} />
-                <ButtonAction onClick={() => getJoke()}>
-                    reload
-                </ButtonAction>
+                <div className={styles.button_wrapper}>
+                    <ButtonAction onClick={() => getJoke()}>
+                        reload
+                    </ButtonAction>
+                    <ButtonLinks href="/">
+                        Back to Home
+                    </ButtonLinks>
+                </div>
+
             </div>
         </main >
     )

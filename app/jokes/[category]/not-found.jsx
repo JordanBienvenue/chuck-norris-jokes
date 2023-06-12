@@ -5,10 +5,8 @@ export default function NotFound() {
     return (
         <main>
             <h2>Category Not Found</h2>
-            <p>Could not find requested resource</p>
-            <p>
-                View <Link href="/">Home page</Link>
-            </p>
+            {/* <p>Could not find requested resource</p> */}
+            <ButtonLinks href="/">Go Home</ButtonLinks>
         </main>
     )
 }
