@@ -1,6 +1,7 @@
 import React from 'react'
 import { notFound } from "next/navigation"
 import Card from '@/components/Card/Card'
+import style from "./page.module.css"
 
 async function getJoke(category) {
     const res = await fetch(`https://api.chucknorris.io/jokes/random?category=${category}`)
@@ -16,7 +17,7 @@ const page = async ({ params: { category } }) => {
 
     if (!data) { notFound() }
     return (
-        <main>
+        <main className={style.container}>
             <h1>Random Joke about {capitalize(category)}</h1>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "end" }} >
                 <Card data={data} />

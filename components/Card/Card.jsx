@@ -10,7 +10,7 @@ const Card = ({ data, isLoading }) => {
                     <p> ~ chuck Norris</p>
                 </div>
             </div>
-            <Image src="/images/1.png" width={200} height={200} alt='chuck-norris' />
+            <Image className={styles.image} src="/images/1.png" width={200} height={200} alt='chuck-norris' />
         </div>
     )
 }
