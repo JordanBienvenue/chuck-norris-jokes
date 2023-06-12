@@ -1,0 +1,36 @@
+.card {
+    background-color: #ffffff10;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+.content p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    text-align: center;
+}
+
+.author {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    display: flex;
+    width: 100%;
+    align-items: end;
+    justify-content: flex-end;
+}

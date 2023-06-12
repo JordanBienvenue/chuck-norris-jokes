@@ -1,12 +1,40 @@
-import React from 'react'
-import { getJokesCategories } from '@/lib/jokes'
+"use client"
+import { ButtonAction } from '@/components/Buttons/Buttons'
+import Card from '@/components/Card/Card'
+import { useState, useEffect } from 'react'
 
 const page = () => {
+    const [data, setData] = useState(null)
+    const [isLoading, setLoading] = useState(false)
+
+    const getJoke = async () => {
+        setLoading(true)
+
+        fetch('https://api.chucknorris.io/jokes/random')
+            .then((res) => res.json())
+            .then((data) => {
+                setData(data)
+                setLoading(false)
+            })
+    }
+
+    useEffect(() => {
+        getJoke()
+    }, [])
+
+    if (isLoading) return <p>Loading...</p>
+    if (!data) return <p>Searching Best Jokes...</p>
+
     return (
-        <div>page</div>
+        <main>
+            <h1>Random Joke</h1>
+            <div className=''>
+                <Card data={data} />
+                <ButtonAction onClick={() => getJoke()}>
+                    reload
+                </ButtonAction>
+            </div>
+        </main >
     )
 }
-
 export default page
-
-// get jokes category and RandomJoke component

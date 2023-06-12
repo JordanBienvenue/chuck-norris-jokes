@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from "./Buttons.module.css"
-export const ButtonAction = ({ children }) => {
+
+export const ButtonAction = ({ children, onClick }) => {
     return (
-        <button className={[styles.button, styles.action]}>
+        <div onClick={onClick} className={styles.button}>
             {children}
-        </button>
+        </div>
     )
 }
 

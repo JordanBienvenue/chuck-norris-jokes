@@ -5,7 +5,7 @@ import { ButtonLinks } from '@/components/Buttons/Buttons'
 
 export default async function Home() {
   return (
-    <main className={styles.main}>
+    <div className={styles.home}>
       <h1 className={styles.title}>Welcome to Jokes app</h1>
       <div className={styles.listing}>
         {
@@ -14,6 +14,6 @@ export default async function Home() {
           ))
         }
       </div>
-    </main>
+    </div>
   )
 }
