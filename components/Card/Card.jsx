@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Card.module.css"
 import Image from 'next/image'
-const Card = ({ data }) => {
+const Card = ({ data, isLoading }) => {
     return (
         <div className={styles.card}>
             <div className={styles.content}>
@@ -10,9 +10,7 @@ const Card = ({ data }) => {
                     <p> ~ chuck Norris</p>
                 </div>
             </div>
-            <figure>
-                <Image src="/images/1.png" width={200} height={200} />
-            </figure>
+            <Image src="/images/1.png" width={200} height={200} alt='chuck-norris' />
         </div>
     )
 }
