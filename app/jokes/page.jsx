@@ -29,7 +29,7 @@ const page = () => {
         <main>
             <h1>Random Joke</h1>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "end" }} >
-                <Card isLoading={isLoading} data={data} />
+                <Card data={data} />
                 <ButtonAction onClick={() => getJoke()}>
                     reload
                 </ButtonAction>
