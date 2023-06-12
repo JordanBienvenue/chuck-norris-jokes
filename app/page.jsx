@@ -1,6 +1,7 @@
 import styles from './page.module.css'
 import { getJokesCategories } from '@/lib/jokes'
 import Thumbnail from '@/components/thumbnail/Thumbnail'
+import { ButtonLinks } from '@/components/Buttons/Buttons'
 
 export default async function Home() {
   return (
